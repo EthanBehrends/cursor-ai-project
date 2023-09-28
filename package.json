@@ -2,10 +2,11 @@
   "name": "blog-server",
   "version": "1.0.0",
   "description": "A web server that lets you create, read, update, and delete blog posts.",
+  "type": "module",
   "main": "server.ts",
   "scripts": {
-    "start": "ts-node server.ts",
-    "dev": "nodemon server.ts",
+    "start": "node --esm server.ts",
+    "dev": "nodemon --exec ts-node --esm server.ts",
     "build": "tsc"
   },
   "keywords": [
@@ -34,3 +35,5 @@
     "typescript": "^5.2.2"
   }
 }
+
+

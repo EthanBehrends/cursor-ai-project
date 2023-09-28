@@ -1,7 +1,13 @@
 import express from 'express';
-import { createBlog, getBlogs, getBlog, updateBlog, deleteBlog } from './controller';
+import { createBlog, getBlogs, getBlog, updateBlog, deleteBlog } from './controller.ts';
 
 const router = express.Router();
+
+// Middleware that logs requests
+router.use((req, _res, next) => {
+  console.log(`${req.method} request received at ${req.url}`);
+  next();
+});
 
 // Create a new blog post
 router.post('/', createBlog);
@@ -19,3 +25,4 @@ router.put('/:id', updateBlog);
 router.delete('/:id', deleteBlog);
 
 export default router;
+

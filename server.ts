@@ -4,7 +4,7 @@ import cors from 'cors';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import blogRoutes from './routes';
+import blogRoutes from './routes.ts';
 
 dotenv.config();
 
