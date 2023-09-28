@@ -14,7 +14,7 @@ export const createBlog = async (req: Request, res: Response) => {
 };
 
 // Get all blog posts
-export const getBlogs = async (req: Request, res: Response) => {
+export const getBlogs = async (_req: Request, res: Response) => {
   try {
     const blogs = await Blog.find();
     res.status(200).json(blogs);
@@ -54,7 +54,7 @@ export const updateBlog = async (req: Request, res: Response) => {
 export const deleteBlog = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
-    const blog = await Blog.findByIdAndRemove(id);
+    await Blog.findByIdAndRemove(id);
     res.status(200).json({ message: 'Blog deleted' });
   } catch (err) {
     res.status(500).json({ message: "error" });
