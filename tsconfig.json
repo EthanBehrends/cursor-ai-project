@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
     "outDir": "./dist",
     "rootDir": "./",
     "strict": true,
@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "lib": ["es6", "dom"],
+    "lib": ["esnext", "dom"],
     "types": ["node"],
     "noImplicitAny": true,
     "noUnusedLocals": true,

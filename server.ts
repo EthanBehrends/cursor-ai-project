@@ -15,7 +15,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // DB Config
-const mongod = new MongoMemoryServer();
+const mongod = await MongoMemoryServer.create();
+
 
 // Connect to MongoDB
 mongoose
